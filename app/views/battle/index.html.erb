@@ -1,1 +1,26 @@
-<p>I love my country</p>
+<br />
+<div> 
+  <div class="list-group userTeam" ng-controller="BattleController as battle" >
+    <div ng-repeat="player in battle.players" class="mon player{{battle.players.indexOf(player)}}">
+      <h3>{{ player.username }} Team:</h3>
+      <div ng-repeat="mon in player.monsters" class="mon monster{{player.monsters.indexOf(mon)}}" >
+        <li class="list-group-item">
+          <p>{{mon.name}}</p>
+          <p>HP: {{mon.hp}}</p>
+          <p>Abilities:</p>
+          <div ng-repeat="ability in mon.abilities" class="mon ability{{mon.abilities.indexOf(ability)}}">
+            <p> &emsp;   {{mon.abilities.indexOf(ability) + 1}}. {{ ability.name }} - {{ability.targeta}}</p>
+            <p> &emsp; &emsp; {{ ability.stat}} {{ability.stat_change}}</p>
+            <p> &emsp; &emsp; AP Cost: {{ability.ap_cost}}</p>
+            <p ng-show="{{ability.effects.length > 0}}"> &emsp; &emsp; Effects: </p>
+            <div ng-repeat="effect in ability.effects" class="mon effect{{ability.effects.indexOf(effect)}}">
+              <p> &emsp; &emsp; {{ability.effects.indexOf(effect) + 1}}. {{effect.name}} - {{effect.targeta}}</p>
+              <p> &emsp; &emsp; &emsp; {{effect.stat}} {{effect.stat_change}} </p>
+            </div> 
+          </div>
+        </li>
+        <br />
+      </div>
+    </div>
+  </div>
+</div>

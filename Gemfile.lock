@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/hiravgandhi/angularjs-rails.git
+  revision: ecc7aef391729d5f179d392eff5e9ede99716302
+  specs:
+    angularjs-rails (1.2.22)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -27,7 +33,6 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
-    angularjs-rails (1.2.22)
     animate-rails (1.0.7)
       rails
     arel (5.0.1.20140414130214)
@@ -120,7 +125,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  angularjs-rails
+  angularjs-rails!
   animate-rails
   bootstrap-sass
   coffee-rails (~> 4.0.0)

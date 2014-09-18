@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'angularjs-rails'
+gem 'angularjs-rails', github: "hiravgandhi/angularjs-rails"
 gem 'jquery-ui-rails'
 gem 'bootstrap-sass'
 gem "animate-rails"
